@@ -1,14 +1,25 @@
 import "./App.css";
-import Login from "./components/Login";
-import LogOut from "./components/LogOut";
-import User from "./components/User";
+import LoginButton from "./components/LoginButton";
+import LogoutButton from "./components/LogoutButton";
+import UserProfile from "./components/UserProfile";
+import { Route, Routes } from "react-router-dom";
+import About from "./components/About";
+import Navbare from "./components/NavBare";
+
 function App() {
   return (
     <div className="App">
-      <>hello it is working</>
-      <Login />
-      <LogOut />
-      <User />
+      <Navbare />
+      <LoginButton />
+      <LogoutButton />
+      <UserProfile />
+      {/* <main>
+        <Routes>
+          <Route path="/" element={<LoginButton />} />
+          <Route path="/UserProfile" element={<UserProfile />} />
+          <Route path="/About" element={<About />} />
+        </Routes>
+      </main> */}
     </div>
   );
 }
